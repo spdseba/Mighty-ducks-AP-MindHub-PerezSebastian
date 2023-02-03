@@ -5,8 +5,11 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     border: none;
+    text-decoration: none;
 }
-
+.underline{
+    text-decoration: underline;
+}
 header{
     background-image: url('../img/design1_image2.jpg');
     background-size: cover;
@@ -45,46 +48,39 @@ header .logo img{
     object-fit: cover;
 }
 nav{
-    position: absolute;
+    position: relative;
     width: 34vw;
-    height: 300px;
-    top: 21rem;
-    left: 0;
+    height: 50px;
+    top: 1.5rem;
+    left: 1rem;
 }
-ul li {
-    list-style: none;
-}
-nav ul{
-    margin: 30px 0 0 30px;
-    width: 100%;   
-}
-nav ul li{
-    margin-top: 60px;
-    display: inline-block;
-}
-nav ul li span{
-    display: none;
-}
-nav ul li a{
+nav a{
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
     margin: 0 3px;
     padding: 5px 10px;
     background-color: rgb(82, 60, 207);
+    border-radius: 5px 5px 0px 0px;
     color: #fff;
     font-weight: 900;
     text-decoration: none;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 3px 0px 1px 0px rgb(80, 78, 78);
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -ms-border-radius: 5px 5px 0px 0px;
+    -o-border-radius: 5px 5px 0px 0px;
 }
-nav ul li a.active, nav ul li a:hover{
+nav a.active, nav a:hover{
     background-color: #fff;
     color: rgb(97, 207, 115);
 }
-main{
-    padding-left: 100px;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(243, 247, 246,.65);
     padding-top: 120px;
 }
 main ul li{
@@ -124,3 +120,117 @@ main article{
 main article p{
     text-indent: 1.8rem;
 }
+#home-container, #about-container, #contact-container{
+    position: relative;
+    padding: 100px 2rem;
+}
+#home-container figure, #about-container figure, #contact-container figure{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+/*** Text Selection ***/
+h3::selection, p::selection, li::selection, span::selection, b::selection, p a::selection {
+    background: #523ccf;
+    color: #f9cc33;
+}
+
+/* Firefox */
+h3::selection, p::-moz-selection, li::-moz-selection, span::-moz-selection, b::-moz-selection, p a::-moz-selection {
+    background: #523ccf;
+    color: #f9cc33;
+}
+/*** End Text Selection ***/
+
+/*** About ***/
+
+/*** About End ***/
+
+/*** Contact ***/
+
+#contact-container{
+    min-height: 50vh;
+}
+/*** Contact End ***/
+
+/*** Game Info ***/
+#game-info-container{
+    padding: 100px 20px;
+}
+table{
+    border-spacing: 0.3rem;
+    margin: 50px auto;
+}
+table thead{
+    background-color: antiquewhite;
+    height: 4rem;
+}
+table th, table td{
+    text-align: center;
+}
+table tr{
+    height: 2rem;
+    padding: 0 1rem;
+}
+table td{
+    padding: 0 1rem;
+}
+table th{
+    padding: 0 1rem;
+}
+table tr{
+    background-color: antiquewhite;
+}
+table tr:hover{
+    background-color: rgb(244, 155, 46);
+}
+#game-info-container b{
+    margin-right: 5px;
+}
+.contact-info-to{
+    margin-top: 1rem;
+}  
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+}
+.phone{
+    text-decoration: none;
+}
+/*** Game Info End ***/
+
+/*** Rules ***/
+#rules-container > p{
+    text-align: center;
+}
+#rules-container article{
+    width: 70%;
+    margin: 0 auto;
+}
+#rules-container article h3, #rules-container article p, #rules-container article > ol{
+    margin-top: 1rem;
+}
+#rules-container article h3{
+    font-size: 1.3rem;
+}
+#rules-container article p, #rules-container article li{
+    font-size: 1.2rem;
+}
+#rules-container article li.simple-list{
+    margin-top: 1rem;
+}
+#rules-container article li span{
+    font-weight: 800;
+}
+#rules-container article ul{
+    padding-left: 2rem;
+    padding-top: 0;
+}
+#rules-container article ul li{
+    width: 100%;
+}
+.circle-list li {
+    list-style: circle inside none;
+}
+/*** Rules End ***/
